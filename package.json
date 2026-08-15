@@ -1,0 +1,46 @@
+{
+  "name": "ship-healthkit-premium",
+  "version": "0.1.0",
+  "main": "index.ts",
+  "private": true,
+  "scripts": {
+    "start": "expo start --dev-client",
+    "ios": "expo run:ios",
+    "android": "expo run:android",
+    "prebuild": "expo prebuild",
+    "postprebuild": "node scripts/sync-native-templates.js"
+  },
+  "dependencies": {
+    "@expo/ui": "~55.0.11",
+    "@expo/vector-icons": "^15.0.2",
+    "@kingstinct/react-native-healthkit": "^13.3.1",
+    "@react-native-ai/apple": "^0.12.0",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "@react-navigation/bottom-tabs": "^7.15.5",
+    "@react-navigation/native": "^7.1.33",
+    "@react-navigation/native-stack": "^7.14.5",
+    "ai": "^6.0.168",
+    "babel-preset-expo": "~55.0.8",
+    "expo": "~55.0.6",
+    "expo-dev-client": "~55.0.10",
+    "expo-localization": "~55.0.17",
+    "expo-splash-screen": "~55.0.10",
+    "expo-status-bar": "~55.0.4",
+    "expo-widgets": "~55.0.13",
+    "i18next": "^25.10.10",
+    "react": "19.2.0",
+    "react-i18next": "^15.7.4",
+    "react-native": "0.83.10",
+    "react-native-gesture-handler": "~2.30.0",
+    "react-native-nitro-modules": "^0.35.2",
+    "react-native-purchases": "^9.14.0",
+    "react-native-safe-area-context": "~5.6.2",
+    "react-native-screens": "~4.23.0",
+    "react-native-svg": "15.15.3",
+    "zustand": "^5.0.11"
+  },
+  "devDependencies": {
+    "@types/react": "~19.1.0",
+    "typescript": "~5.9.2"
+  }
+}
