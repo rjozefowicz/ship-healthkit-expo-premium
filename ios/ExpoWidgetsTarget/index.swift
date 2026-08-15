@@ -1,7 +1,17 @@
-import Foundation
-import SwiftUI
 import WidgetKit
+import SwiftUI
+internal import ExpoWidgets
 
+@main
+struct ExportWidgets0: WidgetBundle {
+  var body: some Widget {
+    
+    HealthStackWidget()
+    WidgetLiveActivity()
+  }
+}
+
+// MARK: - HealthStack home-screen widget (native Swift)
 private struct HealthStackEntry: TimelineEntry {
   let date: Date
   let data: CompanionData

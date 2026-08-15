@@ -1,16 +1,18 @@
 import 'react-native-gesture-handler';
 import '@/i18n';
 import React, { useEffect } from 'react';
-import { ActivityIndicator, StatusBar, View } from 'react-native';
+import { StatusBar } from 'react-native';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import * as SplashScreen from 'expo-splash-screen';
 import { subscribeWatchCommands } from '@/companion/companionBridge';
 import { RootNavigator } from '@/navigation/RootNavigator';
 import { useSessionStore } from '@/session/sessionStore';
 import { useHealthStore } from '@/store/healthStore';
 import { usePurchaseStore } from '@/store/purchaseStore';
 import { useSettingsStore } from '@/store/settingsStore';
-import { colors } from '@/theme';
+
+SplashScreen.preventAutoHideAsync();
 
 export default function App() {
   const hydrated = useSettingsStore((s) => s.hydrated);
@@ -48,12 +50,14 @@ export default function App() {
     return unsub;
   }, []);
 
+  useEffect(() => {
+    if (hydrated) {
+      void SplashScreen.hideAsync();
+    }
+  }, [hydrated]);
+
   if (!hydrated) {
-    return (
-      <View style={{ flex: 1, backgroundColor: colors.bg, alignItems: 'center', justifyContent: 'center' }}>
-        <ActivityIndicator color={colors.accent} />
-      </View>
-    );
+    return null;
   }
 
   return (

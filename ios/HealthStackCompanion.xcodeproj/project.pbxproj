@@ -1,0 +1,826 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */; };
+		BB2F792D24A3F905000567C9 /* Expo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB2F792C24A3F905000567C9 /* Expo.plist */; };
+		F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11748412D0307B40044C1D9 /* AppDelegate.swift */; };
+		4E5F6DAB11874B7186C2E634 /* WidgetDataBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99BD85C8F4F44E7CAC88551B /* WidgetDataBridge.swift */; };
+		E9C374DA41964870B0BFC40E /* WidgetDataBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = EE12ECCA316F4523AADDA00F /* WidgetDataBridge.m */; };
+		A9A199BCA501497B8CB34BCB /* WatchConnectivityBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A74BF8D1574BED8BA02ACB /* WatchConnectivityBridge.swift */; };
+		5E168A5FA9B74250A4123395 /* WatchConnectivityBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8B3836D6A54CEAB8D895AA /* WatchConnectivityBridge.m */; };
+		B1868C09F10F4FDF8B342367 /* HealthStackWatch.app in Copy Files */ = {isa = PBXBuildFile; fileRef = 5304171F0C664EC88F9E3C5C /* HealthStackWatch.app */; };
+		177F19762A9E4429B7E13088 /* HealthStackWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27DD011D60C44B0964CAF44 /* HealthStackWatchApp.swift */; };
+		967C82BD418F43E782584057 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D009F4EA2BC34C2F89553843 /* ContentView.swift */; };
+		ACA7866CBC1343EC9EB5F759 /* WatchSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1168E9277624A4F96DBC1D0 /* WatchSessionManager.swift */; };
+		001550DAA236470F99C86446 /* TodayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C58DC30BAE2457A988C1922 /* TodayView.swift */; };
+		0C5538237B1648078B18FC27 /* ActiveSessionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16227D0872DD4560997862EE /* ActiveSessionView.swift */; };
+		252F765ED3F34F42B6F587B7 /* CompanionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF35899A044C60BF54F7EA /* CompanionData.swift */; };
+		D6B56B91518A4A8AB1FA82B2 /* CompanionTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD47DAE9B434C68929C9264 /* CompanionTheme.swift */; };
+		7A926B00DA4B4576AB050EEE /* index.swift in Sources */ = {isa = PBXBuildFile; fileRef = 120F555E979A4224AAAE8C93 /* index.swift */; };
+		2B539F43E0A84AB1940173C7 /* ExpoWidgetsTarget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5C2CE88C06454DFDAA69D31B /* ExpoWidgetsTarget.appex */; };
+		31780CA9D5D941AE87D0BD92 /* ExpoWidgetsTarget.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 99C9F57EDFBB45B88F34DA1E /* ExpoWidgetsTarget.entitlements */; };
+		1E516463F6C345A1B0078BC0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9506AA45440A4FB4B2948B91 /* Info.plist */; };
+		D797A71BA56E41068A5734AA /* ExpoWidgetsTarget.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 61AD9753A14B42E48E11D73D /* ExpoWidgetsTarget.entitlements */; };
+		3C5FF2D0CB104B349850CBAE /* CompanionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CF35899A044C60BF54F7EA /* CompanionData.swift */; };
+		1E949C34543649BB9FEE07D1 /* CompanionTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD47DAE9B434C68929C9264 /* CompanionTheme.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		13B07F961A680F5B00A75B9A /* HealthStackCompanion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthStackCompanion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = HealthStackCompanion/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = HealthStackCompanion/Info.plist; sourceTree = "<group>"; };
+		AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SplashScreen.storyboard; path = HealthStackCompanion/SplashScreen.storyboard; sourceTree = "<group>"; };
+		BB2F792C24A3F905000567C9 /* Expo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Expo.plist; sourceTree = "<group>"; };
+		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F11748412D0307B40044C1D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = HealthStackCompanion/AppDelegate.swift; sourceTree = "<group>"; };
+		F11748442D0722820044C1D9 /* HealthStackCompanion-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "HealthStackCompanion-Bridging-Header.h"; path = "HealthStackCompanion/HealthStackCompanion-Bridging-Header.h"; sourceTree = "<group>"; };
+		99BD85C8F4F44E7CAC88551B /* WidgetDataBridge.swift */ = {isa = PBXFileReference; name = "WidgetDataBridge.swift"; path = "HealthStackCompanion/WidgetDataBridge.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		EE12ECCA316F4523AADDA00F /* WidgetDataBridge.m */ = {isa = PBXFileReference; name = "WidgetDataBridge.m"; path = "HealthStackCompanion/WidgetDataBridge.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		86A74BF8D1574BED8BA02ACB /* WatchConnectivityBridge.swift */ = {isa = PBXFileReference; name = "WatchConnectivityBridge.swift"; path = "HealthStackCompanion/WatchConnectivityBridge.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		DC8B3836D6A54CEAB8D895AA /* WatchConnectivityBridge.m */ = {isa = PBXFileReference; name = "WatchConnectivityBridge.m"; path = "HealthStackCompanion/WatchConnectivityBridge.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		5304171F0C664EC88F9E3C5C /* HealthStackWatch.app */ = {isa = PBXFileReference; name = "HealthStackWatch.app"; path = "HealthStackWatch.app"; sourceTree = BUILT_PRODUCTS_DIR; fileEncoding = undefined; lastKnownFileType = undefined; explicitFileType = "wrapper.application"; includeInIndex = 0; };
+		D27DD011D60C44B0964CAF44 /* HealthStackWatchApp.swift */ = {isa = PBXFileReference; name = "HealthStackWatchApp.swift"; path = "HealthStackWatchApp.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		D009F4EA2BC34C2F89553843 /* ContentView.swift */ = {isa = PBXFileReference; name = "ContentView.swift"; path = "ContentView.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		C1168E9277624A4F96DBC1D0 /* WatchSessionManager.swift */ = {isa = PBXFileReference; name = "WatchSessionManager.swift"; path = "WatchSessionManager.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		6C58DC30BAE2457A988C1922 /* TodayView.swift */ = {isa = PBXFileReference; name = "TodayView.swift"; path = "Views/TodayView.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		16227D0872DD4560997862EE /* ActiveSessionView.swift */ = {isa = PBXFileReference; name = "ActiveSessionView.swift"; path = "Views/ActiveSessionView.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		C6CF35899A044C60BF54F7EA /* CompanionData.swift */ = {isa = PBXFileReference; name = "CompanionData.swift"; path = "CompanionData.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		2DD47DAE9B434C68929C9264 /* CompanionTheme.swift */ = {isa = PBXFileReference; name = "CompanionTheme.swift"; path = "CompanionTheme.swift"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		5C2CE88C06454DFDAA69D31B /* ExpoWidgetsTarget.appex */ = {isa = PBXFileReference; name = "ExpoWidgetsTarget.appex"; path = "ExpoWidgetsTarget.appex"; sourceTree = BUILT_PRODUCTS_DIR; fileEncoding = undefined; lastKnownFileType = undefined; explicitFileType = wrapper.app-extension; includeInIndex = 0; };
+		120F555E979A4224AAAE8C93 /* index.swift */ = {isa = PBXFileReference; name = "index.swift"; path = index.swift; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.swift; explicitFileType = undefined; includeInIndex = 0; };
+		99C9F57EDFBB45B88F34DA1E /* ExpoWidgetsTarget.entitlements */ = {isa = PBXFileReference; name = "ExpoWidgetsTarget.entitlements"; path = ExpoWidgetsTarget.entitlements; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9506AA45440A4FB4B2948B91 /* Info.plist */ = {isa = PBXFileReference; name = "Info.plist"; path = Info.plist; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.plist.xml; explicitFileType = undefined; includeInIndex = 0; };
+		61AD9753A14B42E48E11D73D /* ExpoWidgetsTarget.entitlements */ = {isa = PBXFileReference; name = "ExpoWidgetsTarget.entitlements"; path = "ExpoWidgetsTarget.entitlements"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		13B07F8C1A680F5B00A75B9A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D80DD030841D4C42832C9C52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86A18A8A618946E393B54D02 /* Embed Foundation Extensions */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		13B07FAE1A68108700A75B9A /* HealthStackCompanion */ = {
+			isa = PBXGroup;
+			children = (
+				F11748412D0307B40044C1D9 /* AppDelegate.swift */,
+				F11748442D0722820044C1D9 /* HealthStackCompanion-Bridging-Header.h */,
+				BB2F792B24A3F905000567C9 /* Supporting */,
+				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				13B07FB61A68108700A75B9A /* Info.plist */,
+				AA286B85B6C04FC6940260E9 /* SplashScreen.storyboard */,
+				99BD85C8F4F44E7CAC88551B /* WidgetDataBridge.swift */,
+				EE12ECCA316F4523AADDA00F /* WidgetDataBridge.m */,
+				86A74BF8D1574BED8BA02ACB /* WatchConnectivityBridge.swift */,
+				DC8B3836D6A54CEAB8D895AA /* WatchConnectivityBridge.m */,
+			);
+			name = HealthStackCompanion;
+			sourceTree = "<group>";
+		};
+		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		83CBB9F61A601CBA00E9B192 = {
+			isa = PBXGroup;
+			children = (
+				13B07FAE1A68108700A75B9A /* HealthStackCompanion */,
+				832341AE1AAA6A7D00B99B32 /* Libraries */,
+				83CBBA001A601CBA00E9B192 /* Products */,
+				2D16E6871FA4F8E400B85C8A /* Frameworks */,
+				5A4718E2CDDF4877AA6837EC /* HealthStackShared */,
+				975A77EF5E6F47E38F38B12B /* HealthStackWatch */,
+				C412F97CCEB54EAE8BB511A5 /* ExpoWidgetsTarget */,
+			);
+			indentWidth = 2;
+			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 0;
+		};
+		83CBBA001A601CBA00E9B192 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				13B07F961A680F5B00A75B9A /* HealthStackCompanion.app */,
+				5304171F0C664EC88F9E3C5C /* HealthStackWatch.app */,
+				5C2CE88C06454DFDAA69D31B /* ExpoWidgetsTarget.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB2F792B24A3F905000567C9 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				BB2F792C24A3F905000567C9 /* Expo.plist */,
+			);
+			name = Supporting;
+			path = HealthStackCompanion/Supporting;
+			sourceTree = "<group>";
+		};
+		5A4718E2CDDF4877AA6837EC /* HealthStackShared */ = {
+			isa = PBXGroup;
+			children = (
+				C6CF35899A044C60BF54F7EA /* CompanionData.swift */,
+				2DD47DAE9B434C68929C9264 /* CompanionTheme.swift */,
+			);
+			name = HealthStackShared;
+			path = HealthStackShared;
+			sourceTree = "<group>";
+		};
+		975A77EF5E6F47E38F38B12B /* HealthStackWatch */ = {
+			isa = PBXGroup;
+			children = (
+				D27DD011D60C44B0964CAF44 /* HealthStackWatchApp.swift */,
+				D009F4EA2BC34C2F89553843 /* ContentView.swift */,
+				C1168E9277624A4F96DBC1D0 /* WatchSessionManager.swift */,
+				6C58DC30BAE2457A988C1922 /* TodayView.swift */,
+				16227D0872DD4560997862EE /* ActiveSessionView.swift */,
+			);
+			name = HealthStackWatch;
+			path = HealthStackWatch;
+			sourceTree = "<group>";
+		};
+		C412F97CCEB54EAE8BB511A5 /* ExpoWidgetsTarget */ = {
+			isa = PBXGroup;
+			children = (
+				99C9F57EDFBB45B88F34DA1E /* ExpoWidgetsTarget.entitlements */,
+				9506AA45440A4FB4B2948B91 /* Info.plist */,
+				120F555E979A4224AAAE8C93 /* index.swift */,
+				61AD9753A14B42E48E11D73D /* ExpoWidgetsTarget.entitlements */,
+			);
+			name = ExpoWidgetsTarget;
+			path = ExpoWidgetsTarget;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		13B07F861A680F5B00A75B9A /* HealthStackCompanion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "HealthStackCompanion" */;
+			buildPhases = (
+				08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */,
+				13B07F871A680F5B00A75B9A /* Sources */,
+				13B07F8C1A680F5B00A75B9A /* Frameworks */,
+				13B07F8E1A680F5B00A75B9A /* Resources */,
+				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */,
+				E397C8756105483EA455A701 /* [Expo Dev Launcher] Strip Local Network Keys for Release */,
+				A3A9EE65694143D28C80EA7A /* Embed Watch Content */,
+				2F8346601AAB43AE9E2E71BB /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6C3E3253CF741D694ED4460 /* PBXTargetDependency */,
+				CD2FB99E4CCF4985B9F5A5A6 /* PBXTargetDependency */,
+				00F677EE950B4879AF3AE16E /* PBXTargetDependency */,
+			);
+			name = HealthStackCompanion;
+			productName = HealthStackCompanion;
+			productReference = 13B07F961A680F5B00A75B9A /* HealthStackCompanion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6FDAF86EAFBD428A832D4B4F /* "HealthStackWatch" */ = {
+			isa = PBXNativeTarget;
+			name = "HealthStackWatch";
+			productName = "HealthStackWatch";
+			productReference = 5304171F0C664EC88F9E3C5C;
+			productType = "com.apple.product-type.application";
+			buildConfigurationList = E764860E5F214AAA9BDB8149;
+			buildPhases = (
+				3B9B3B00C6B143CFB6E40D08 /* Sources */,
+				D80DD030841D4C42832C9C52 /* Frameworks */,
+				CBD015DF51BE4B6F98FC1743 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+		};
+		DF4349653A7346BCA91A89EA /* ExpoWidgetsTarget */ = {
+			isa = PBXNativeTarget;
+			name = ExpoWidgetsTarget;
+			productName = ExpoWidgetsTarget;
+			productReference = 5C2CE88C06454DFDAA69D31B;
+			productType = "com.apple.product-type.app-extension";
+			buildConfigurationList = 958A42317F2E4407B41EAD95;
+			buildPhases = (
+				7BDF10706A284BE6BB47AD56 /* Embed Foundation Extensions */,
+				86A18A8A618946E393B54D02 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		83CBB9F71A601CBA00E9B192 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				TargetAttributes = {
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1250;
+					};
+					DF4349653A7346BCA91A89EA = {
+						LastSwiftMigration = 1250;
+					};
+				};
+			};
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "HealthStackCompanion" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 83CBB9F61A601CBA00E9B192;
+			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				13B07F861A680F5B00A75B9A /* HealthStackCompanion */,
+				6FDAF86EAFBD428A832D4B4F /* "HealthStackWatch" */,
+				DF4349653A7346BCA91A89EA /* ExpoWidgetsTarget */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		13B07F8E1A680F5B00A75B9A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB2F792D24A3F905000567C9 /* Expo.plist in Resources */,
+				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				3E461D99554A48A4959DE609 /* SplashScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBD015DF51BE4B6F98FC1743 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/.xcode.env",
+				"$(SRCROOT)/.xcode.env.local",
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"$PODS_ROOT/../.xcode.env\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env\"\nfi\nif [[ -f \"$PODS_ROOT/../.xcode.env.local\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env.local\"\nfi\n\n# The project root by default is one level up from the ios directory\nexport PROJECT_ROOT=\"$PROJECT_DIR\"/..\n\nif [[ \"$CONFIGURATION\" = *Debug* ]]; then\n  export SKIP_BUNDLING=1\nfi\nif [[ -z \"$ENTRY_FILE\" ]]; then\n  # Set the entry JS file using the bundler's entry resolution.\n  export ENTRY_FILE=\"$(\"$NODE_BINARY\" -e \"require('expo/scripts/resolveAppEntry')\" \"$PROJECT_ROOT\" ios absolute | tail -n 1)\"\nfi\n\nif [[ -z \"$CLI_PATH\" ]]; then\n  # Use Expo CLI\n  export CLI_PATH=\"$(\"$NODE_BINARY\" --print \"require.resolve('@expo/cli', { paths: [require.resolve('expo/package.json')] })\")\"\nfi\nif [[ -z \"$BUNDLE_COMMAND\" ]]; then\n  # Default Expo CLI command for bundling\n  export BUNDLE_COMMAND=\"export:embed\"\nfi\n\n# Source .xcode.env.updates if it exists to allow\n# SKIP_BUNDLING to be unset if needed\nif [[ -f \"$PODS_ROOT/../.xcode.env.updates\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env.updates\"\nfi\n# Source local changes to allow overrides\n# if needed\nif [[ -f \"$PODS_ROOT/../.xcode.env.local\" ]]; then\n  source \"$PODS_ROOT/../.xcode.env.local\"\nfi\n\n`\"$NODE_BINARY\" --print \"require('path').dirname(require.resolve('react-native/package.json')) + '/scripts/react-native-xcode.sh'\"`\n\n";
+		};
+		08A4A3CD28434E44B6B9DE2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HealthStackCompanion-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		800E24972A6A228C8D4807E9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HealthStackCompanion/Pods-HealthStackCompanion-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXConstants/EXConstants.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/EXUpdates/EXUpdates.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/React-Core/RCTI18nStrings.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXConstants.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/EXUpdates.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RCTI18nStrings.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HealthStackCompanion/Pods-HealthStackCompanion-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E397C8756105483EA455A701 /* [Expo Dev Launcher] Strip Local Network Keys for Release */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "[Expo Dev Launcher] Strip Local Network Keys for Release";
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			shellPath = /bin/sh;
+			shellScript = "# Strip dev-launcher-specific local network permission keys from non-Debug builds
+# This only removes _expo._tcp Bonjour services and the dev-launcher usage description.
+# Other Bonjour services and custom descriptions are preserved for production use.
+
+if [ \"$CONFIGURATION\" != \"Debug\" ]; then
+  PLIST_PATH=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"
+  if [ -f \"$PLIST_PATH\" ]; then
+    # Check if NSBonjourServices exists
+    if /usr/libexec/PlistBuddy -c \"Print :NSBonjourServices\" \"$PLIST_PATH\" >/dev/null 2>&1; then
+      # Get the count of services
+      COUNT=$(/usr/libexec/PlistBuddy -c \"Print :NSBonjourServices\" \"$PLIST_PATH\" 2>/dev/null | grep \"^    \" | wc -l | tr -d ' ')
+
+      # Remove _expo._tcp
+      for ((i=COUNT-1; i>=0; i--)); do
+        SERVICE=$(/usr/libexec/PlistBuddy -c \"Print :NSBonjourServices:$i\" \"$PLIST_PATH\" 2>/dev/null || echo \"\")
+        if echo \"$SERVICE\" | grep -q \"_expo._tcp\"; then
+          /usr/libexec/PlistBuddy -c \"Delete :NSBonjourServices:$i\" \"$PLIST_PATH\" 2>/dev/null || true
+        fi
+      done
+
+      # If the array is now empty, remove it entirely
+      REMAINING=$(/usr/libexec/PlistBuddy -c \"Print :NSBonjourServices\" \"$PLIST_PATH\" 2>/dev/null | grep \"^    \" | wc -l | tr -d ' ')
+      if [ \"$REMAINING\" -eq \"0\" ]; then
+        /usr/libexec/PlistBuddy -c \"Delete :NSBonjourServices\" \"$PLIST_PATH\" 2>/dev/null || true
+      fi
+    fi
+
+    # Only delete the description if it matches the dev-launcher default text
+    DESC=$(/usr/libexec/PlistBuddy -c \"Print :NSLocalNetworkUsageDescription\" \"$PLIST_PATH\" 2>/dev/null || echo \"\")
+    if echo \"$DESC\" | grep -q \"Expo Dev Launcher\"; then
+      /usr/libexec/PlistBuddy -c \"Delete :NSLocalNetworkUsageDescription\" \"$PLIST_PATH\" 2>/dev/null || true
+    fi
+  fi
+fi
+";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		13B07F871A680F5B00A75B9A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F11748422D0307B40044C1D9 /* AppDelegate.swift in Sources */,
+				4E5F6DAB11874B7186C2E634 /* WidgetDataBridge.swift in Sources */,
+				E9C374DA41964870B0BFC40E /* WidgetDataBridge.m in Sources */,
+				A9A199BCA501497B8CB34BCB /* WatchConnectivityBridge.swift in Sources */,
+				5E168A5FA9B74250A4123395 /* WatchConnectivityBridge.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B9B3B00C6B143CFB6E40D08 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				177F19762A9E4429B7E13088 /* HealthStackWatchApp.swift in Sources */,
+				967C82BD418F43E782584057 /* ContentView.swift in Sources */,
+				ACA7866CBC1343EC9EB5F759 /* WatchSessionManager.swift in Sources */,
+				001550DAA236470F99C86446 /* TodayView.swift in Sources */,
+				0C5538237B1648078B18FC27 /* ActiveSessionView.swift in Sources */,
+				252F765ED3F34F42B6F587B7 /* CompanionData.swift in Sources */,
+				D6B56B91518A4A8AB1FA82B2 /* CompanionTheme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BDF10706A284BE6BB47AD56 /* Embed Foundation Extensions */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A926B00DA4B4576AB050EEE /* index.swift in Sources */,
+				3C5FF2D0CB104B349850CBAE /* CompanionData.swift in Sources */,
+				1E949C34543649BB9FEE07D1 /* CompanionTheme.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		13B07F941A680F5B00A75B9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"FB_SONARKIT_ENABLED=1",
+				);
+				INFOPLIST_FILE = HealthStackCompanion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.healthstack";
+				PRODUCT_NAME = "HealthStackCompanion";
+				SWIFT_OBJC_BRIDGING_HEADER = "HealthStackCompanion/HealthStackCompanion-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				TARGETED_DEVICE_FAMILY = "1";
+				CODE_SIGN_ENTITLEMENTS = HealthStackCompanion/HealthStackCompanion.entitlements;
+			};
+			name = Debug;
+		};
+		13B07F951A680F5B00A75B9A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = HealthStackCompanion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.healthstack";
+				PRODUCT_NAME = "HealthStackCompanion";
+				SWIFT_OBJC_BRIDGING_HEADER = "HealthStackCompanion/HealthStackCompanion-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				TARGETED_DEVICE_FAMILY = "1";
+				CODE_SIGN_ENTITLEMENTS = HealthStackCompanion/HealthStackCompanion.entitlements;
+			};
+			name = Release;
+		};
+		83CBBA201A601CBA00E9B192 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = "\"$(inherited)\"";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		83CBBA211A601CBA00E9B192 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++20";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					/usr/lib/swift,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = "\"$(inherited)\"";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9704EC5AA0B04BEEA7164046 /* Debug */ = {
+			name = Debug;
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "HealthStackWatch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "HealthStackWatch";
+				SKIP_INSTALL = "YES";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.healthstack.watchkitapp";
+				SDKROOT = watchos;
+				WATCHOS_DEPLOYMENT_TARGET = "10.0";
+				TARGETED_DEVICE_FAMILY = "4";
+				SWIFT_VERSION = "5.0";
+				GENERATE_INFOPLIST_FILE = "NO";
+				CODE_SIGN_ENTITLEMENTS = "HealthStackWatch/HealthStackWatch.entitlements";
+				INFOPLIST_KEY_CFBundleDisplayName = "Health Stack";
+				ENABLE_PREVIEWS = "YES";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+			};
+		};
+		7F3D3C5C7FDC4DC0AEF6195F /* Release */ = {
+			name = Release;
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "HealthStackWatch/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "HealthStackWatch";
+				SKIP_INSTALL = "YES";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.healthstack.watchkitapp";
+				SDKROOT = watchos;
+				WATCHOS_DEPLOYMENT_TARGET = "10.0";
+				TARGETED_DEVICE_FAMILY = "4";
+				SWIFT_VERSION = "5.0";
+				GENERATE_INFOPLIST_FILE = "NO";
+				CODE_SIGN_ENTITLEMENTS = "HealthStackWatch/HealthStackWatch.entitlements";
+				INFOPLIST_KEY_CFBundleDisplayName = "Health Stack";
+				ENABLE_PREVIEWS = "YES";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+			};
+		};
+		5E2ED07FA8B942FEA7E7D5F7 /* Debug */ = {
+			name = Debug;
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				INFOPLIST_FILE = ExpoWidgetsTarget/Info.plist;
+				CURRENT_PROJECT_VERSION = "1";
+				IPHONEOS_DEPLOYMENT_TARGET = "16.2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.healthstack.widgets";
+				GENERATE_INFOPLIST_FILE = "YES";
+				INFOPLIST_KEY_CFBundleDisplayName = ExpoWidgetsTarget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = "0.1.0";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				CODE_SIGN_ENTITLEMENTS = "ExpoWidgetsTarget/ExpoWidgetsTarget.entitlements";
+				APPLICATION_EXTENSION_API_ONLY = "YES";
+			};
+		};
+		773588037E5B42F092827D20 /* Release */ = {
+			name = Release;
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				INFOPLIST_FILE = ExpoWidgetsTarget/Info.plist;
+				CURRENT_PROJECT_VERSION = "1";
+				IPHONEOS_DEPLOYMENT_TARGET = "16.2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.example.healthstack.widgets";
+				GENERATE_INFOPLIST_FILE = "YES";
+				INFOPLIST_KEY_CFBundleDisplayName = ExpoWidgetsTarget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				MARKETING_VERSION = "0.1.0";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				CODE_SIGN_ENTITLEMENTS = "ExpoWidgetsTarget/ExpoWidgetsTarget.entitlements";
+				APPLICATION_EXTENSION_API_ONLY = "YES";
+			};
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "HealthStackCompanion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13B07F941A680F5B00A75B9A /* Debug */,
+				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "HealthStackCompanion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBA201A601CBA00E9B192 /* Debug */,
+				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E764860E5F214AAA9BDB8149 /* Build configuration list for PBXNativeTarget "HealthStackWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9704EC5AA0B04BEEA7164046 /* Debug */,
+				7F3D3C5C7FDC4DC0AEF6195F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		958A42317F2E4407B41EAD95 /* Build configuration list for PBXNativeTarget "ExpoWidgetsTarget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E2ED07FA8B942FEA7E7D5F7 /* Debug */,
+				773588037E5B42F092827D20 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A3A9EE65694143D28C80EA7A /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1868C09F10F4FDF8B342367 /* "HealthStackWatch.app" in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Embed Watch Content";
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+		};
+		2F8346601AAB43AE9E2E71BB /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B539F43E0A84AB1940173C7 /* ExpoWidgetsTarget.appex in Embed Foundation Extensions */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			name = "Embed Foundation Extensions";
+			dstPath = "";
+			dstSubfolderSpec = 13;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6C3E3253CF741D694ED4460 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DF4349653A7346BCA91A89EA /* ExpoWidgetsTarget */;
+			targetProxy = 6C4CE5F89C7A4F1EA30976E7 /* PBXContainerItemProxy */;
+		};
+		CD2FB99E4CCF4985B9F5A5A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FDAF86EAFBD428A832D4B4F /* "HealthStackWatch" */;
+			targetProxy = B39EED27CA9240DDA46AA98B /* PBXContainerItemProxy */;
+		};
+		00F677EE950B4879AF3AE16E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6FDAF86EAFBD428A832D4B4F /* "HealthStackWatch" */;
+			targetProxy = DF75E9E30C4548C6A8414DDF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXContainerItemProxy section */
+		6C4CE5F89C7A4F1EA30976E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DF4349653A7346BCA91A89EA;
+			remoteInfo = ExpoWidgetsTarget;
+		};
+		B39EED27CA9240DDA46AA98B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FDAF86EAFBD428A832D4B4F;
+			remoteInfo = "HealthStackWatch";
+		};
+		DF75E9E30C4548C6A8414DDF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6FDAF86EAFBD428A832D4B4F;
+			remoteInfo = "HealthStackWatch";
+		};
+/* End PBXContainerItemProxy section */
+	};
+	rootObject = 83CBB9F71A601CBA00E9B192 /* Project object */;
+}

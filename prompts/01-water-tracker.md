@@ -80,7 +80,7 @@ Extend these — do not reinvent:
 
 - Update `CompanionSnapshot`:
   - Map `stepsToday`/`stepsGoal` **or** add explicit `waterMlToday` / `waterGoalMl` fields.
-  - Prefer **adding** `waterGoalMl` and using existing `waterMlToday`; if native Swift `CompanionData` must stay in sync, update `native/HealthStackShared/CompanionData.swift`, widget UI, and Watch UI to show **ml / goal** as the primary complication/widget line.
+  - Prefer **adding** `waterGoalMl` and using existing `waterMlToday`; if native Swift `CompanionData` must stay in sync, update `native/HealthStackShared/CompanionData.swift`, widget UI (`HealthStackWidget.swift`), and Watch UI to show **ml / goal** as the primary complication/widget line.
 - After every successful water write + fetch, call the existing companion sync path (`syncCompanions` / bridge) so widget + Watch update.
 - Live Activity: reuse session machinery with water-themed label; showing elapsed time is enough.
 

@@ -8,11 +8,6 @@ export default {
     userInterfaceStyle: 'automatic',
     newArchEnabled: true,
     scheme: 'healthstack',
-    splash: {
-      image: './assets/splash.png',
-      resizeMode: 'contain',
-      backgroundColor: '#0B1220',
-    },
     ios: {
       bundleIdentifier: 'com.example.healthstack',
       supportsTablet: false,
@@ -33,6 +28,27 @@ export default {
       },
       package: 'com.example.healthstack',
     },
+    extra: {
+      eas: {
+        build: {
+          experimental: {
+            ios: {
+              appExtensions: [
+                {
+                  targetName: 'HealthStackWatch',
+                  bundleIdentifier: 'com.example.healthstack.watchkitapp',
+                  entitlements: {
+                    'com.apple.security.application-groups': [
+                      'group.com.example.healthstack',
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        },
+      },
+    },
     plugins: [
       [
         '@kingstinct/react-native-healthkit',
@@ -43,7 +59,19 @@ export default {
             'This app can save workouts and water intake you log so they appear in Apple Health and count toward your Activity rings.',
         },
       ],
-      'expo-splash-screen',
+      [
+        'expo-splash-screen',
+        {
+          backgroundColor: '#0B1220',
+          image: './assets/splash.png',
+          imageWidth: 200,
+          resizeMode: 'contain',
+          dark: {
+            backgroundColor: '#0B1220',
+            image: './assets/splash.png',
+          },
+        },
+      ],
       [
         'expo-widgets',
         {

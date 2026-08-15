@@ -137,7 +137,7 @@ export const es: TranslationSchema = {
   },
   companion: {
     heading: 'Companion',
-    hint: 'Demo de Live Activity / Dynamic Island, widget y sync con Watch. Los targets nativos deben enlazarse tras prebuild (ver README).',
+    hint: 'Demo de Live Activity / Dynamic Island, widget y sync con Watch.',
     sessionTitle: 'Sesión → Dynamic Island',
     sessionActive: '{{label}} · {{elapsed}}',
     pausedSuffix: ' (pausado)',

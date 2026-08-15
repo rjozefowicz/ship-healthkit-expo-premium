@@ -134,7 +134,7 @@ export const en = {
   },
   companion: {
     heading: 'Companion',
-    hint: 'Demo Live Activity / Dynamic Island, home widget push, and Watch sync. Native targets must be linked after prebuild (see README).',
+    hint: 'Demo Live Activity / Dynamic Island, home widget push, and Watch sync.',
     sessionTitle: 'Session → Dynamic Island',
     sessionActive: '{{label}} · {{elapsed}}',
     pausedSuffix: ' (paused)',

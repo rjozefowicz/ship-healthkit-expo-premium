@@ -2,34 +2,34 @@
 
 Everything in **Basic**, plus Apple companion surfaces (Path A / DeskWalker-style):
 
-- Dynamic Island / Live Activities (`expo-widgets`)
-- Home-screen widget (App Group + `WidgetDataBridge`)
-- watchOS companion (`WatchConnectivity`)
+- Dynamic Island / Live Activities (`expo-widgets` Live Activity shell only)
+- Native home-screen widget (Swift in `ExpoWidgetsTarget` + `WidgetDataBridge`)
+- watchOS companion (`HealthStackWatch` + `WatchConnectivity`)
 - On-device Apple Intelligence insights (no BYOK)
+
+Xcode targets (same shape as DeskWalker):
+
+- **HealthStackCompanion** — `com.example.healthstack`
+- **ExpoWidgetsTarget** — `com.example.healthstack.widgets` (native widget + Live Activity)
+- **HealthStackWatch** — `com.example.healthstack.watchkitapp`
 
 ## Quick start
 
 ```bash
 cd packages/premium
 npm install
-npx expo prebuild --platform ios
-# plugins copy native/ → ios/ and patch ExpoWidgetsTarget
-npx expo run:ios --device
+npx expo prebuild --platform ios --clean --no-install
+node scripts/post-prebuild-ios.js
+npx expo run:ios
 ```
 
-Then finish Xcode linking (first time / after clean prebuild):
+`ios/` is part of the repo (Pods stay gitignored). After a **clean** prebuild, always run `scripts/post-prebuild-ios.js` so the native widget is injected into `ExpoWidgetsTarget/index.swift` and the Watch target is re-linked.
 
-1. **Main app target** — add to Compile Sources:
-   - `HealthStack/WidgetDataBridge.swift` + `.m`
-   - `HealthStack/WatchConnectivityBridge.swift` + `.m`
-2. **App Groups** on main app, widgets, and Watch: `group.com.example.healthstack`
-3. **ExpoWidgetsTarget** — add `HealthStackShared/*.swift` to Compile Sources
-4. **Watch target** — create `HealthStackWatch` watchOS app, embed in iPhone app, compile:
-   - `HealthStackWatch/**`
-   - `HealthStackShared/CompanionData.swift`
-5. Bridging header / New Architecture: ensure RCT bridges are visible (same pattern as DeskWalker)
+EAS local/cloud uses the same sequence via `eas.json` `prebuildCommand` — do not skip it, or Expo will regenerate `ios/` without the Swift widget / Watch target.
 
-Live Activity UI comes from `src/liveActivities/SessionActivity.tsx` via `expo-widgets` (no extra Xcode file for Island).
+The home-screen widget is native Swift (`native/HealthStackShared/HealthStackWidget.swift`), fed by JS through `WidgetDataBridge` (App Group `group.com.example.healthstack`). After install: long-press Home Screen → Add Widget → **Health Stack**.
+
+Live Activity UI stays in `src/liveActivities/SessionActivity.tsx`. Do **not** add a `widgets[]` entry in `expo-widgets` for the home-screen widget.
 
 ## App tab: Companion
 
@@ -42,7 +42,9 @@ Live Activity UI comes from `src/liveActivities/SessionActivity.tsx` via `expo-w
 | Placeholder | Change to |
 |---|---|
 | `com.example.healthstack` | your bundle id |
-| `group.com.example.healthstack` | your App Group (keep in sync in `app.config.ts`, Swift bridges, `CompanionDataLoader`) |
+| `com.example.healthstack.widgets` | widget extension id |
+| `com.example.healthstack.watchkitapp` | Watch id |
+| `group.com.example.healthstack` | App Group (`app.config.ts`, Swift bridges, `CompanionDataLoader`) |
 | `healthstack://` | your URL scheme |
 
 ## i18n
@@ -52,12 +54,13 @@ Same as Basic: `src/i18n/locales/` (`en`, `es`) + Settings language picker. Comp
 ## Layout
 
 ```
-src/          # JS (Basic + companion/session/ai/liveActivities)
-native/       # Swift templates synced into ios/ by withCompanionNative
-plugins/      # expo-widgets inject + native sync
+src/          # JS (widgetBridge + Live Activity + app)
+native/       # Swift sources of truth (copied into ios/ on prebuild)
+ios/          # committed Xcode project (app + ExpoWidgetsTarget + Watch)
+plugins/      # inject native widget + copy/link targets after expo-widgets
 ```
 
-Reference implementation: `examples/desk-walker/mobile` (full production Path A).
+Reference implementation: `examples/desk-walker/mobile`.
 
 ## Build prompts (Companion)
 
@@ -72,4 +75,3 @@ Five paste-ready Cursor / Claude Code / Codex prompts that reshape this skeleton
 | Sleep Tracker | Overnight nights + goal |
 | Desk Session | Island + Watch + HealthKit workout write |
 | Recovery Coach | Sleep + HRV + RHR score + on-device AI |
-# ship-healthkit-expo-premium
